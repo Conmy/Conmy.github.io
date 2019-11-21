@@ -1,6 +1,8 @@
 var child = require('child_process');
-const gulp = require('gulp');
+var gulp = require('gulp');
 var gutil = require('gulp-util');
+var del = require('del');
+var browserSync = require('browser-sync').create();
 
 const jekyllLogger = (buffer) => {
   buffer.toString().split(/\n/)
@@ -9,11 +11,18 @@ const jekyllLogger = (buffer) => {
     });
 };
 
+gulp.task('clean', () => {
+  return del([
+    './assets/vendor/**/*',
+    './_site/**/*'
+  ]);
+});
+
 gulp.task('copy-node-module-js-dependencies', () => {
   return gulp.src([
-      'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/popper.js/dist/umd/popper.min.js',
-      'node_modules/bootstrap/dist/js/bootstrap.min.js'
+      'node_modules/jquery/dist/jquery.min.js*',
+      'node_modules/popper.js/dist/umd/popper.min.js*',
+      'node_modules/bootstrap/dist/js/bootstrap.min.js*'
     ]).pipe(gulp.dest('assets/vendor/js/'));
 });
 
@@ -24,19 +33,26 @@ gulp.task('copy-node-module-bootstrap-scss', () => {
 });
 
 gulp.task('jekyll-serve', () => {
-  const jekyll = child.spawn('jekyll', ['serve']);
+  const serveProcess = child.spawn('jekyll', ['serve', '--watch', '--livereload']);
   
-  jekyll.stdout.on('data', jekyllLogger);
-  jekyll.stderr.on('data', jekyllLogger);
+  serveProcess.stdout.on('data', jekyllLogger);
+  serveProcess.stderr.on('data', jekyllLogger);
 });
 
 gulp.task('jekyll-build', (done) => {
-  const buildProcess = child.exec('jekyll build');
+  const buildProcess = child.spawn('jekyll', ['build']);
 
   buildProcess.stdout.on('data', jekyllLogger);
   buildProcess.stderr.on('data', jekyllLogger);
   done();
 });
 
-gulp.task('serve', gulp.series('copy-node-module-js-dependencies', 'copy-node-module-bootstrap-scss', 'jekyll-serve'));
-gulp.task('build', gulp.series('copy-node-module-js-dependencies', 'copy-node-module-bootstrap-scss', 'jekyll-build'));
+// Static browser-sync reload server
+gulp.task('browser-sync', function() {
+  
+});
+
+gulp.task('shared-setup', gulp.series('clean', gulp.parallel('copy-node-module-js-dependencies', 'copy-node-module-bootstrap-scss')));
+
+gulp.task('serve', gulp.series('shared-setup', 'jekyll-serve', 'browser-sync'));
+gulp.task('build', gulp.series('shared-setup', 'jekyll-build'));
