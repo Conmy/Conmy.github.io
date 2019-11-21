@@ -1,2 +1,7 @@
 _site
 .jekyll-cache/**/*
+
+# auto-generated vendor dependencies from node_modules
+assets/vendor
+
+node_modules

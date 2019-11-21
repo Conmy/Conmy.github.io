@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
   </head>
   <body>
     {% include navigation.html %}
     {{ content }}
+    <script src="{{'/assets/vendor/js/jquery.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/assets/vendor/js/popper.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/assets/vendor/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
   </body>
 
 </html>

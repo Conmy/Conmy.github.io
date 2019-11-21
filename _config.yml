@@ -1,0 +1,6 @@
+sass:
+  load_paths:
+    - _sass
+    - assets
+exclude:
+  - node_modules
