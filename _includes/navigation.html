@@ -1,8 +1,14 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-  <a class="navbar-brand" href="/">David Conmy</a>
-  {% for item in site.data.navigation %}
-  <a class="nav-item nav-link {% if page.url == item.link %}active{% endif %} {% if item.active == false %}disabled{% endif %}" href="{{ item.link }}">
-    {{ item.name }}
-  </a>
-  {% endfor %}
+<nav class="navbar bg-primary navbar-light navbar-expand-sm">
+  <div class="container">
+    <a class="navbar-brand d-none d-sm-inline-block" href="/">David Conmy</a>
+    <div class="navbar-nav">
+      {% for item in site.data.navigation %}
+      <a class="nav-item nav-link {% if page.url == item.link %}active{% endif %} {% if item.active == false %}disabled{% endif %}" href="{{ item.link }}">{{ item.name }}</a>
+      {% endfor %}
+    </div><!-- navbar-nav -->
+    <a class="navbar-text d-none d-sm-inline-block" href="https://github.com/Conmy">
+      <img src="/assets/images/GitHub-Mark-32px.png"/>
+      Fork me on Github
+    </a>
+  </div><!-- container -->
 </nav>

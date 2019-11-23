@@ -1,12 +1,11 @@
 ---
 layout: default
-title: CV
+title: David Conmy - CV
 ---
 # Experience
 
-## 2015 - Present
-### SAP SSC Ltd. Ireland, Galway
-#### Software Developer
+### 2015 - Present
+#### Software Developer - SAP SSC Ltd. Ireland, Galway
 
 - Working in an agile working environment using the Scrum methodology to create and deliver software applications
 - Full-Stack Web Development and Application Owner on SAP Field Service Management solutions
@@ -20,9 +19,8 @@ title: CV
 - Customer Facing Support and Maintenance
     - Customer-facing interactions and customer expectation management, managing bugs and issues for supported projects
 
-## 2012 - 2014
-### Capita Innovative Business Solutions
-#### Software Developer
+### 2012 - 2014
+#### Software Developer - Capita Innovative Business Solutions
 - Developed “green-fields” bespoke management software for customers who required an on-premise management solution
     - Developed in VB.NET and Oracle SQL
 - Integrating custom applications with Microsoft Office Products and SAP Crystal Reports
@@ -34,7 +32,7 @@ title: CV
 | - | - |
 | SQL | Git |
 | Java | SapUI5 |
-| Javascript | AngularJS + Angular 5+ |
+| Javascript | AngularJS / Angular 5+ |
 | Typescript | NodeJS |
 | Shell Scripting (bash/zsh) | Docker |
 | VB.NET | Kubernetes |
@@ -49,13 +47,8 @@ title: CV
 
 # Education
 
-## Professional Scrum Master
-### Scrum.org
-
-- PSM I (Professional Scrum Master) Certification
-
-## B.Eng Hons - Electronic and Computer Engineering
-### National University of Ireland, Galway
+#### National University of Ireland, Galway
+B.Eng Hons - Electronic and Computer Engineering
 
 - Programming
 - Software Applicaion Development
@@ -64,3 +57,6 @@ title: CV
 - Microprocessor Engineering
 - Electromagnetic Engineering
 
+#### Professional Scrum Master -  Scrum.org
+
+- PSM I (Professional Scrum Master) Certification

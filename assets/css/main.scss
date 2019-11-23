@@ -3,9 +3,10 @@
 @import "variables";
 @import "vendor/scss/bootstrap/bootstrap";
 
-a {
-  color: #ffffff;
+html, body {
+    height: 100%;
 }
-a:hover {
-  color: #a8a8a8;
+
+.navbar a {
+    color: #f0f0f0;
 }
