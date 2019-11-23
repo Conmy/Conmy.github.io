@@ -33,14 +33,14 @@ gulp.task('copy-node-module-bootstrap-scss', () => {
 });
 
 gulp.task('jekyll-serve', () => {
-  const serveProcess = child.spawn('jekyll', ['serve', '--watch', '--livereload']);
+  const serveProcess = child.spawn('bundle', ['exec', 'jekyll', 'serve', '--watch', '--livereload']);
   
   serveProcess.stdout.on('data', jekyllLogger);
   serveProcess.stderr.on('data', jekyllLogger);
 });
 
 gulp.task('jekyll-build', (done) => {
-  const buildProcess = child.spawn('jekyll', ['build']);
+  const buildProcess = child.spawn('bundle', ['exec', 'jekyll', 'build']);
 
   buildProcess.stdout.on('data', jekyllLogger);
   buildProcess.stderr.on('data', jekyllLogger);
