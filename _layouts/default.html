@@ -7,8 +7,24 @@
   </head>
   <body>
     {% include navigation.html %}
-    <div class="container h-100 overflow-auto">
-      {{ content }}
+    <div class="container h-80">
+        <div class="row h-80">
+            <div class="col-md-3 d-none d-md-inline-block">
+                <div class="card mt-3">
+                    <span class="card-title h4">Featured Posts</span>
+                    <ul class="list-group list-group-flush">
+                        {% for post in site.data.featured_posts %}
+                        <li class="list-group-item"><a href="{{ post.url }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    </ul> 
+                </div>
+            </div><!-- small col -->
+            <div class="col-md-9 border rounded border-primary my-3">
+              <div class="container">
+                {{ content }}
+              </div><!-- container -->
+            </div><!-- large col -->
+        </div><!-- row -->
     </div><!-- container -->
     <script src="{{'/assets/vendor/js/jquery.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/assets/vendor/js/popper.min.js' | prepend: site.baseurl}}"></script>

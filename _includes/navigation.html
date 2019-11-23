@@ -1,12 +1,17 @@
-<nav class="navbar bg-primary navbar-light navbar-expand-sm">
+<nav class="navbar bg-primary navbar-light navbar-expand-md">
   <div class="container">
-    <a class="navbar-brand d-none d-sm-inline-block" href="/">David Conmy</a>
+    <div class="navbar-brand d-none d-md-inline-block navbar-light">
+        <a class="link-unstyled" href="/">
+          <img class="rounded-circle" src="https://www.gravatar.com/avatar/{{ site.data.info.gravatarId }}" height="40 px"/>
+          {{ site.data.info.name }}
+        </a>
+    </div>
     <div class="navbar-nav">
       {% for item in site.data.navigation %}
       <a class="nav-item nav-link {% if page.url == item.link %}active{% endif %} {% if item.active == false %}disabled{% endif %}" href="{{ item.link }}">{{ item.name }}</a>
       {% endfor %}
     </div><!-- navbar-nav -->
-    <a class="navbar-text d-none d-sm-inline-block" href="https://github.com/Conmy">
+    <a class="navbar-text d-none d-md-inline-block" href="https://github.com/Conmy">
       <img src="/assets/images/GitHub-Mark-32px.png"/>
       Fork me on Github
     </a>
