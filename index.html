@@ -1,6 +1,15 @@
 ---
 layout: default
-title: {{ site.data.info.name }}
+title: David Conmy
 ---
-<h1>Hello World</h1>
-<p>This is a website by David Conmy</p>
+<div class="mt-3">
+    {% capture gravatar-url%}https://www.gravatar.com/avatar/{{ site.data.info.gravatarId }}{% endcapture %}
+    {% include image.html url=gravatar-url%}
+</div>
+
+<span align="center">
+    <h1>Hi</h1>
+    <p>Welcome to the website of David Conmy</p>
+    <p>I am a Software Engineer based in Galway, Ireland<br />
+        Check out my CV or browse my posts in the links above</p>
+</span>
