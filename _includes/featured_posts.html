@@ -1,0 +1,8 @@
+<div class="card mt-3">
+    <div class="card-title"><h4 align="center" class="mb-0">Featured Posts</h4></div>
+    <ul class="list-group list-group-flush">
+        {% for post in site.data.featured_posts %}
+        <li class="list-group-item"><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul> 
+</div>
