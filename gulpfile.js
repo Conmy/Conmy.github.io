@@ -1,7 +1,7 @@
 var child = require('child_process');
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 var del = require('del');
+var log = require('fancy-log');
 
 var sass = require('gulp-sass');
 sass.compiler = require('node-sass');
@@ -9,7 +9,7 @@ sass.compiler = require('node-sass');
 const jekyllLogger = (buffer) => {
   buffer.toString().split(/\n/)
     .forEach((message) => {
-      gutil.log('Jekyll: ' + message)
+      log('Jekyll: ' + message)
     });
 };
 
