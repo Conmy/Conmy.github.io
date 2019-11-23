@@ -21,6 +21,7 @@
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-run-command": "0.0.10",
+    "gulp-sass": "^4.0.2",
     "gulp-util": "^3.0.8"
   }
 }

@@ -1,6 +1,11 @@
 _site
 .jekyll-cache/**/*
 
-# auto-generated vendor dependencies from node_modules
 
+# Mac-OS
+.DS_Store
+
+# auto-generated vendor dependencies from node_modules
 node_modules
+# preprocessor files from gulp tasks
+_sass/bootstrap
