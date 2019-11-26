@@ -2,16 +2,14 @@
 layout: default
 title: David Conmy
 ---
-<div class="mt-3">
-    {% capture gravatar-url%}https://www.gravatar.com/avatar/{{ site.data.info.gravatarId }}{% endcapture %}
-    {% include image.html url=gravatar-url%}
-</div>
-
-<span align="center">
-    <h1>Hi</h1>
-    <p>Welcome to the website of David Conmy</p>
-    <p>I am a Software Engineer based in Galway, Ireland<br />
-        I build and manage full-stack web-based applications in the cloud<br />
-        Check out my CV or browse my posts in the links above</p>
-    <p>Contact me at <a href="mailto:david@conmy.me">david@conmy.me</a></p>
-</span>
+<div class="row">
+    <div class="col">
+        {% capture gravatar-url%}https://www.gravatar.com/avatar/{{ site.data.info.gravatarId }}{% endcapture %}
+        {% include image.html url=gravatar-url left-align=true %}
+    </div><!-- col -->
+    <div class="col-12">
+        <p>Welcome to the website of {{ site.data.info.name }}</p>
+        <p>{{ site.data.info.blurb }}</p>
+        <p>If you want to get in touch, send me an <a href="mailto:{{ site.data.info.email}}">e-mail</a></p>
+    </div><!-- col -->
+</div><!-- row -->

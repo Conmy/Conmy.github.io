@@ -7020,8 +7020,17 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+.navbar a {
+  color: #f0f0f0; }
+
 html, body {
   height: 100%; }
 
-.navbar a {
-  color: #f0f0f0; }
+.main-content {
+  min-height: 100%;
+  height: -webkit-fill-available;
+  overflow: auto; }
+
+#col-1 #col-2 {
+  margin-bottom: -9999px;
+  padding-bottom: 9999px; }
