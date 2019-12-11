@@ -7,20 +7,10 @@
   </head>
   <body>
     {% include navigation.html %}
-    <div class="main-content container">
-        <div class="main-content row">
-            <div id="col-2" class="col mt-3">
-              <div class="row">
-                <div class="col">
-                  {{ content }}
-                </div>
-              </div><!-- row -->
-            </div><!-- col -->
-            <div id="col-1" class="bg-light border-left border-right col col-md-3 d-none d-md-inline-block">
-                {% include featured_posts.html %}
-            </div><!-- small col -->
-        </div><!-- row -->
-    </div><!-- container -->
+    
+    <div class="container">
+      {{ content }}
+    </div>
     <script src="{{'/assets/vendor/js/jquery.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/assets/vendor/js/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/assets/vendor/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>

@@ -2,14 +2,14 @@
 layout: default
 title: David Conmy
 ---
-<div class="row">
-    <div class="col">
+<div class="row mt-2">
+    <div class="col-2">
         {% capture gravatar-url%}https://www.gravatar.com/avatar/{{ site.data.info.gravatarId }}{% endcapture %}
         {% include image.html url=gravatar-url left-align=true %}
     </div><!-- col -->
-    <div class="col-12">
+    <div class="col-8">
         <p>Welcome to the website of {{ site.data.info.name }}</p>
         <p>{{ site.data.info.blurb }}</p>
-        <p>If you want to get in touch, send me an <a href="mailto:{{ site.data.info.email}}">e-mail</a></p>
+        <p>If you want to get in touch, send me an <a href="mailto:{{ site.data.info.email }}">e-mail</a></p>
     </div><!-- col -->
 </div><!-- row -->
