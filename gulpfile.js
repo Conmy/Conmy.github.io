@@ -62,6 +62,13 @@ gulp.task('copy-node-module-bootstrap-scss', () => {
 });
 
 gulp.task('jekyll-serve', () => {
+  const serveProcess = child.spawn('bundle', ['exec', 'jekyll', 'serve', '--drafts', '--watch', '--livereload']);
+  
+  serveProcess.stdout.on('data', jekyllLogger);
+  serveProcess.stderr.on('data', jekyllLogger);
+});
+
+gulp.task('jekyll-live-preview', () => {
   const serveProcess = child.spawn('bundle', ['exec', 'jekyll', 'serve', '--watch', '--livereload']);
   
   serveProcess.stdout.on('data', jekyllLogger);
@@ -92,4 +99,5 @@ gulp.task('shared-setup',
   );
 
 gulp.task('serve', gulp.series('shared-setup', 'jekyll-serve'));
+gulp.task('preview', gulp.series('shared-setup', 'jekyll-live-preview'));
 gulp.task('build', gulp.series('shared-setup', 'jekyll-build'));
