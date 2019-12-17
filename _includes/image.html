@@ -1,5 +1,5 @@
-
 <figure class="image {% if include.left-align != true %} text-center {% endif %}">
-    <img src="{{ include.url }}" alt="{{ include.description }}" height="100px" width="100px">
+    <img src="{{ include.url }}" alt="{{ include.description }}"
+        {% if include.square == true %} height="100px" width="100px" {% endif %} />
     <figcaption text-align="center">{{ include.description }}</figcaption>
 </figure>
