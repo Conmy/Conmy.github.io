@@ -1,34 +1,17 @@
-Education
----
-
-### National University of Ireland, Galway
-#### 2007 - 2012
-B.Eng Hons - Electronic and Computer Engineering
-
-Course Highlights:
-- Object-Oriented Programming
-- Software Engineering
-- Telecommunications Software Applications
-- Embedded Software Engineering
-- Microprocessor Systems Engineering
-
 Experience
 ---
 
 ### Software Developer - SAP SSC Ltd. Ireland, Galway
 #### 2015 - Present
 
-During my time with SAP I have worked and developed on multiple different topics and technologies in various capacities.
-
-- Working in an agile working environment using Scrum and Agile methodologies to create and deliver software applications
-- Set up fix-level support processes and team infrastructure to support projects developed in SAP Cloud Platform
-- Support Developer for custom-developed projects built on top of existing CRM and ERP Systems (Business ByDesign, Cloud for Customer, SuccessFactors) in SAP Cloud Platform
+- Tasked with setting up support processes and team infrastructure to support projects developed on SAP Cloud Platform
+- Developer for custom-developed enhancement projects built to work with existing CRM and ERP Systems (SuccessFactors, ERP systems) on SAP Cloud Platform
     - This includes both front-end and backend solutions (SAP UI5, Java with Spring & Spring-Boot, Maven projects, and NodeJs projects)
 - Application owner for two front-end applications in SAP Field Service Management
-    - Applications built using the Angular framework and built using material design (and later to SAP Fiori style guidelines)
+    - Applications built using the Angular framework and built using material design (and later built to SAP Fiori style guidelines)
     - Applications related to master-data management and bulk-uploading of data
-- Custom development on top of existing Sports and Entertainment Software (SAP Sports One)
-    - Applications built using SAP UI5, SAP HANA, Javascript, HANA XS technologies
+- Custom development on top of existing Sports and Entertainment Applications (SAP SportsOne)
+    - Applications built using SAP UI5, SAP HANA DB, Javascript, and HANA XS
     - Built an on-demand cloud development environment using Kubernetes and SAP Converged Cloud to enable fast turnaround for deployment, development, and bug fixing
 - Managed projects using CI/CD methodologies
     - Managed project delivery using tools such as Docker, Kubernetes, Jenkins, Piper, xMake, and Bamboo
@@ -48,7 +31,7 @@ Skills
 
 ### Languages
 
-- JavaScript / TypeScript
+- JavaScript/TypeScript
 - JAVA
 - Shell Scripting (Bash/Zsh)
 - SQL
@@ -69,6 +52,20 @@ Skills
 - SAP HANA
 - postgreSQL
 - Git
+
+Education
+---
+
+### National University of Ireland, Galway
+#### Graduated 2012
+B.Eng Hons - Electronic and Computer Engineering
+
+Course Highlights:
+- Object-Oriented Programming
+- Software Engineering
+- Telecommunications Software Applications
+- Embedded Software Engineering
+- Microprocessor Systems Engineering
 
 Achievements and Interests
 ---
