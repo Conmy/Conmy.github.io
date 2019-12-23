@@ -62,7 +62,7 @@ gulp.task('copy-node-module-bootstrap-scss', () => {
 });
 
 gulp.task('jekyll-serve', () => {
-  const serveProcess = child.spawn('bundle', ['exec', 'jekyll', 'serve', '--drafts', '--watch', '--livereload']);
+  const serveProcess = child.spawn('bundle', ['exec', 'jekyll', 'serve', '--drafts', '--watch', '--livereload', '-o']);
   
   serveProcess.stdout.on('data', jekyllLogger);
   serveProcess.stderr.on('data', jekyllLogger);
@@ -93,7 +93,7 @@ gulp.task('shared-setup',
     gulp.series(
       'clean',
       gulp.parallel('copy-node-module-js-dependencies', 'copy-node-module-bootstrap-scss'),
-      'sass',
+      //'sass',
       'generate-gravatar-ids'
     )
   );

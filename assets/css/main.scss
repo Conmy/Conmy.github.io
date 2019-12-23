@@ -1,21 +1,4 @@
-@import "_sass/_variables";
-@import "_sass/bootstrap/bootstrap";
-
-.navbar a {
-    color: #f0f0f0;
-}
-
-html, body {
-    height: 100%;
-}
-
-.main-content {
-    min-height: 100%;
-    height: -webkit-fill-available;
-    overflow: auto;
-}
-
-#col-1 #col-2 {
-    margin-bottom: -9999px;
-    padding-bottom: 9999px;
-}
+---
+---
+@import "_variables";
+@import "bootstrap/bootstrap";
