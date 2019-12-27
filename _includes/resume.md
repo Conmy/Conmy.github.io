@@ -72,6 +72,13 @@ Achievements and Interests
 
 ### Achievements
 
+#### SAP Appreciate Awards
+
+- Apr 2018: Spotlight Award: Build Bridges, Not Silos
+- Apr 2019: Honor Award: Build Bridges, Not Silos
+- Sep 2019: Spotlight Award: Stay Curious
+- Dec 2019: Spotlight Award: Keep the Promise
+
 #### Professional Scrum Master -  Scrum.org
 
 - PSM I (Professional Scrum Master) Certification
