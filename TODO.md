@@ -1,0 +1,14 @@
+# TODOs
+- [ ] Create an Articles-Card include element
+    - [ ] Use this include to add articles to the end of post webpages
+- [x] Remove Featured articles Column
+- [x] Change Resume order
+    - [x] Make dates smaller and after the title
+    - [x] Move Education above experience
+    - [x] Rethink Hobbies
+        - [x] Maybe to Achievements and Interests
+        - [x] Don't have gaming first
+- [x] Create print-version of resume page
+    - [x] Link to print-version of resume from actual resume page
+- [x] Finish blog post on chip8 emulator
+    - [x] Use the assets already added

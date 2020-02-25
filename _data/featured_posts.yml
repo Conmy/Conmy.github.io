@@ -1,4 +1,10 @@
-- title: About this Website
+- title: How it's Made
   url: /2019/11/23/about.html
-- title: Hello
-  url: /2019/11/22/first.html
+  excerpt: How I made this website
+  title-image: /assets/images/svg/jekyll.svg
+  title-image-alt: jekyll logo
+- title: I Made an Emulator
+  url: /2020/02/25/chip8.html
+  excerpt: An Example of TDD in action
+  title-image: /assets/images/chip8/chip8-breakout.png
+  title-image-alt: breakout on a chip8 emulator

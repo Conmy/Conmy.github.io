@@ -1,0 +1,28 @@
+---
+layout: print-resume
+title: printable-resume
+---
+<div class="row bg-dark text-light pt-3 mt-2">
+    <ul class="col-6">
+        <div>
+            <span class="font-weight-bold">Name:</span> {{ site.data.info.name }}
+        </div>
+        <div>
+            <span class="font-weight-bold">Website:</span> <a class="text-light" href="{{ site.data.info.url }}">{{ site.data.info.url }}</a>
+        </div>
+        <div>
+            <span class="font-weight-bold">Contact:</span> <a class="text-light" href="mailto:{{ site.data.info.email }}">{{ site.data.info.email }}</a>
+        </div>
+        <div>
+            <span class="font-weight-bold">Github:</span> <a class="text-light" href="{{ site.data.info.github }}">{{ site.data.info.github }}</a>
+        </div>
+        <div>
+            <span class="font-weight-bold">LinkedIn:</span> <a class="text-light" href="{{ site.data.info.linkedIn }}">{{ site.data.info.linkedIn }}</a>
+        </div>
+    </ul>
+    <div class="col-5">
+        {{ site.data.info.blurb }}
+    </div>
+</div>
+{% capture resume_content %}{% include resume.md %}{% endcapture %}
+{{ resume_content | markdownify }}
