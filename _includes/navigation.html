@@ -1,19 +1,20 @@
-<nav class="navbar bg-primary navbar-light navbar-expand-md py-0">
-  <div class="container pr-0">
-    <div class="navbar-brand d-none d-md-inline-block navbar-light">
-        <a href="/">
-          <img class="rounded-circle" src="https://www.gravatar.com/avatar/{{ site.data.info.gravatarId }}" height="40 px"/>
-          {{ site.data.info.name }}
-        </a>
-    </div>
-    <div class="navbar-nav">
+<nav class="navbar bg-primary navbar-light navbar-expand-md">
+  <div class="container">
+    <span class="navbar-brand">
+      <a class="pr-1" href="{{ site.data.info.github}}"><img src="/assets/images/GitHub-Mark-32px.png" alt="github link" /></a>
+      <a href="/">
+        {{ site.data.info.name }}
+      </a>
+    </span>
+    <ul class="navbar-nav">
       {% for item in site.data.navigation %}
-      <a class="nav-item nav-link 
-          {% if page.url == item.link %}active{% endif %}
-          {% if item.active == false %}disabled{% endif %}"
-          href="{{ item.link }}">{{ item.name }}</a>
+      <li class="nav-item">
+        <a class="nav-link 
+            {% if page.url == item.link %}active{% endif %}
+            {% if item.active == false %}disabled{% endif %}"
+            href="{{ item.link }}">{{ item.name }}</a>
+      </li>
       {% endfor %}
-    </div><!-- navbar-nav -->
-    <a href="{{ site.data.info.github}}"><img src="/assets/images/GitHub-Mark-32px.png" alt="github icon" /></a>
+    </ul>
   </div><!-- container -->
 </nav>

@@ -7,9 +7,13 @@ title: Blog
     <div class="card mt-2">
         <div class="card-body">
             <div class="media">
-                {% if post.title-image %}
-                <img class="mr-3" src="{{ post.title-image }}" alt="{{ post.title-image-alt }}" height="50px" width="50px" >
-                {% endif %}
+                <img class="mr-3" src="
+                    {% if post.title-image %}
+                        {{ post.title-image }}
+                    {% else %}
+                        https://www.gravatar.com/avatar/{{ site.data.info.gravatarId }}?s=50
+                    {% endif %}
+                " alt="{{ post.title-image-alt }}" height="50px" width="50px" >
                 <div class="media-body">
                     <span class="font-italic">{{ post.date | date_to_long_string }}</span>
                     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
