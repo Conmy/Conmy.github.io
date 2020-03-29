@@ -6,17 +6,12 @@ title: David Conmy
     <div class="row">
     {% for item in site.data.navigation %}
         <div class="col-6 pt-3">
-            <!-- Card -->
             <div class="card">
-                <!-- Card content -->
                 <div class="card-body">
-                    <!-- Title -->
                     <h4 class="card-title"><a href="{{ item.link }}">{{ item.name }}</a></h4>
-                    <!-- Text -->
                     <p class="card-text">{{ item.blurb }}</p>
                 </div>                        
             </div>
-            <!-- Card -->
         </div>
     {% endfor %}
     </div>
