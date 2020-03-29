@@ -2,9 +2,10 @@
 layout: default
 title: David Conmy - CV
 ---
-
-<div class="col">
-    <a href="print-resume" class="btn btn-primary float-right">{% octicon arrow-down height:25 %} Print Version</a>
+<div class="container py-2">
+    <div class="col">
+        <a href="print-resume" class="btn btn-primary float-right"><i class="fas fa-download"></i> Print Version</a>
+    </div>
+    {% capture resume_data %}{% include resume.md %}{% endcapture %}
+    {{ resume_data | markdownify }}
 </div>
-{% capture resume_data %}{% include resume.md %}{% endcapture %}
-{{ resume_data | markdownify }}

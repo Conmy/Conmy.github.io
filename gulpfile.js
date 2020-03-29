@@ -51,7 +51,8 @@ gulp.task('copy-node-module-js-dependencies', () => {
   return gulp.src([
       'node_modules/jquery/dist/jquery.min.js*',
       'node_modules/popper.js/dist/umd/popper.min.js*',
-      'node_modules/bootstrap/dist/js/bootstrap.min.js*'
+      'node_modules/bootstrap/dist/js/bootstrap.min.js*',
+      'node_modules/mdbootstrap/js/mdb.min.js*'
     ]).pipe(gulp.dest('assets/vendor/js/'));
 });
 
@@ -59,6 +60,12 @@ gulp.task('copy-node-module-bootstrap-scss', () => {
   return gulp.src([
       'node_modules/bootstrap/scss/**'
     ]).pipe(gulp.dest('_sass/bootstrap'));
+});
+
+gulp.task('copy-node-module-mdb-css', () => {
+  return gulp.src([
+      'node_modules/mdbootstrap/css/mdb.min.css*'
+    ]).pipe(gulp.dest('assets/css/'));
 });
 
 gulp.task('jekyll-serve', () => {
@@ -92,7 +99,7 @@ gulp.task('generate-gravatar-ids', () => {
 gulp.task('shared-setup', 
     gulp.series(
       'clean',
-      gulp.parallel('copy-node-module-js-dependencies', 'copy-node-module-bootstrap-scss'),
+      gulp.parallel('copy-node-module-js-dependencies', 'copy-node-module-bootstrap-scss', 'copy-node-module-mdb-css'),
       'generate-gravatar-ids'
     )
   );

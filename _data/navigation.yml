@@ -1,6 +1,8 @@
-- name: Home
-  link: /
 - name: CV
   link: /_pages/resume.html
+  blurb: |
+    This is where I keep my resume up-to-date with all my latest professional experience.
 - name: Blog
   link: /_pages/blog.html
+  blurb: |
+    I write about the different projects that I am working on and share information that I have learned.

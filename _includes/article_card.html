@@ -1,16 +1,16 @@
 <h1>Other Blog Posts on this Site</h1>
 {% for post in site.data.featured_posts %}
-<div class="card mb-3">
-    <div class="card-body">
-        <div class="media">
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="media">
             {% if post.title-image %}
-            <img class="mr-3" src="{{ post.title-image }}" alt="{{ post.title-image-alt }}" height="50px" width="50px" >
+                <img class="mr-3" src="{{ post.title-image }}" alt="{{ post.title-image-alt }}" height="50px" width="50px" >
             {% endif %}
-            <div class="media-body">
-                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <span class="card-text text-muted">{{ post.excerpt }}</span>
-            </div>
-        </div><!-- media -->
-    </div><!-- card-body -->
-</div><!-- card --> 
+                <div class="media-body">
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <span class="card-text text-muted">{{ post.excerpt }}</span>
+                </div>
+            </div><!-- media -->
+        </div><!-- card-body -->
+    </div><!-- card --> 
 {% endfor %}

@@ -4,15 +4,40 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/main.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   </head>
   <body>
     {% include navigation.html %}
-    
-    <div class="container pt-3">
-      {{ content }}
+    <div class="container-fluid">
+      <div class="row pt-5">
+          <div class="col-lg-4">
+            <div class="container">
+              <div class="d-flex justify-content-center">
+                <img src="https://www.gravatar.com/avatar/{{ site.data.info.gravatarId }}?s=300" class="rounded-circle" alt="{{ site.data.info.name }}"/>
+              </div>
+              <p class="pt-2 text-center">{{ site.data.info.blurb }}</p>
+              <ul class="list-group list-group-flush text-center">
+                <li class="list-group-item">
+                  <a href="{{ site.data.info.github }}"><i class="fab fa-github fa-lg"></i> Github Profile</a>
+                </li>
+                <li class="list-group-item">
+                  <a href="{{ site.data.info.linkedIn }}"><i class="fab fa-linkedin fa-lg"></i> Linked-In</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            {{ content }}
+          </div>
+        </div>
+      </div>
     </div>
     <script src="{{'/assets/vendor/js/jquery.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/assets/vendor/js/popper.min.js' | prepend: site.baseurl}}"></script>
     <script src="{{'/assets/vendor/js/bootstrap.min.js' | prepend: site.baseurl}}"></script>
+    <script src="{{'/assets/vendor/js/mdb.min.js' | prepend: site.baseurl}}"></script>
   </body>
 </html>
