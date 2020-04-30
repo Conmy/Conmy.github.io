@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mdbootstrap": "^4.14.1",
     "popper.js": "^1.14.4"
   },
