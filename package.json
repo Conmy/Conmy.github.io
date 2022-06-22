@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "bundle install",
     "build": "gulp build",
     "start": "gulp serve",
     "preview": "gulp preview",
